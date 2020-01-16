@@ -1,0 +1,25 @@
+/*Sets style for entire page*/
+html {
+    font-size: 20px; /* px means "pixels": the base font size is now 10 pixels high  */
+    font-family: 'Montserrat', sans-serif; /* this should be the rest of the output you got from Google fonts */
+    background-color: lightgrey;
+}
+
+/*Style specifically for paragraph, unsorted list, list element and header 1*/
+p, ul, li, h1 {
+    color: black;
+    width: 500px;
+}
+
+ul, ol {
+    border: 1px dotted black;
+    width: 200px;
+}
+ul:hover, ol:hover{
+
+}
+
+/*style that gets activated when mouse is hovering*/
+img:hover {
+    filter: brightness(50%);
+}
