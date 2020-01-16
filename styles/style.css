@@ -5,8 +5,16 @@ html {
     background-color: lightgrey;
 }
 
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #fffffb;
+    padding: 10px 20px 20px 20px;
+    border: 0 solid black;  /*Borde stå 0px, men det är redundant*/
+}
+
 /*Style specifically for paragraph, unsorted list, list element and header 1*/
-p, ul, li, h1 {
+p, ul, li {
     color: black;
     width: 500px;
 }
@@ -22,4 +30,19 @@ ul:hover, ol:hover{
 /*style that gets activated when mouse is hovering*/
 img:hover {
     filter: brightness(50%);
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    /*display block används för att margin i body inte ska påverka den i img. Nu kan vi sätta till våra egna margins*/
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: #00539F;
+    text-shadow: 3px 3px 1px black;
 }
