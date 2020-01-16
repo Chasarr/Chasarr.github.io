@@ -15,3 +15,6 @@ if (btn2){
 
 
 
+function myFunc(){
+    return 'lol rawr xdddddddd';
+}
