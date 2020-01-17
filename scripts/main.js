@@ -1,5 +1,6 @@
 let myImage = document.querySelector("img")
 let i = 0
+let sound = new Audio("sounds/touch.mp3")
 myImage.onmouseenter = function () {
     console.log("hello: " + i++)
     let mySrc = myImage.getAttribute("src")
@@ -14,4 +15,5 @@ myImage.onmouseleave = function () {
 
 myImage.onclick = function () {
     myImage.setAttribute("src", "images/graphicz-deepfried.jpg")
+    sound.play("touch.mp3")
 }
