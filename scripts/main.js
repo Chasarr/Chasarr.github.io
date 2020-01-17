@@ -1,20 +1,17 @@
-const myHeading = document.querySelector('h1');
-const btn2 = document.querySelector('img');
-const var1 = 3;
-let var2 = 3 === 3;
-if (myHeading !== null) {
-    myHeading.textContent = var2.toString();
-    document.writeln(var2.toString());
-} else {
-    document.writeln('aw det funka ente');
+let myImage = document.querySelector("img")
+let i = 0
+myImage.onmouseenter = function () {
+    console.log("hello: " + i++)
+    let mySrc = myImage.getAttribute("src")
+    if (mySrc === "images/graphicz.jpg") {
+        myImage.setAttribute("src", "images/graphicz-angry.jpg")
+    }
 }
 
-if (btn2){
-    alert('VA VEM HAR SATT EN FUL BILD PÅ MIN HEMSIDA');
+myImage.onmouseleave = function () {
+    myImage.setAttribute("src", "images/graphicz.jpg")
 }
 
-
-
-function myFunc(){
-    return 'lol rawr xdddddddd';
+myImage.onclick = function () {
+    myImage.setAttribute("src", "images/graphicz-deepfried.jpg")
 }

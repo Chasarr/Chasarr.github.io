@@ -28,11 +28,11 @@ ul:hover, ol:hover{
 }
 
 /*style that gets activated when mouse is hovering*/
-img:hover {
+/*img:hover {
     filter: brightness(50%);
     display: block;
     margin: 0 auto;
-}
+}*/
 
 img {
     /*display block används för att margin i body inte ska påverka den i img. Nu kan vi sätta till våra egna margins*/
