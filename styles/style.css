@@ -34,6 +34,8 @@ ul:hover, ol:hover{
     margin: 0 auto;
 }*/
 
+
+
 img {
     /*display block används för att margin i body inte ska påverka den i img. Nu kan vi sätta till våra egna margins*/
     display: block;
