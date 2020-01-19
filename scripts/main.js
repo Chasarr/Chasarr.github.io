@@ -1,21 +1,15 @@
 let myImage = document.querySelector("img")
 let myHeading = document.querySelector("h1")
 let myButton = document.querySelector("button")
+const insultQuestions = ["Write yo name ya doofus", "Your name. Hand it over", "GE MIG NAMNET SKIT I PRIVACY", "Please gib name YOU IDOET!!1!!1",
+    "Hello it is I, the president of USA of america, Donald Trump. HAND OVER USERNAME OR I'LL SWAT YOU", "Give your name or I'll murder your entire family"]
 
-console.log(myHeading)
-if(!localStorage.getItem("name")){
+if (!localStorage.getItem("name")) {
     setUserName()
-}else{
+} else {
     let storedName = localStorage.getItem("name")
     myHeading.textContent = "Välkommen tillbaks, " + storedName
 }
-
-
-
-
-
-
-
 
 
 let start = new Audio("sounds/start.mp3")
@@ -44,10 +38,23 @@ myButton.onclick = function () {
 
 
 function setUserName() {
-    let myName = prompt("Please enter your name.")
+    let myName = ""
+    let idiot = false
+    let promptText = "Please enter your name"
+    do {
+        if(idiot){
+            promptText = insultQuestions[getRandomInt(insultQuestions.length)]
+        }
+        myName = prompt(promptText)
+        idiot = true
+    } while (!myName)
     localStorage.setItem("name", myName)
-    console.log("changing name to " + myName)
     myHeading.textContent = "Välkommen, " + myName
+
 }
 
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
 
