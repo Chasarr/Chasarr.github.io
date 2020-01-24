@@ -54,8 +54,8 @@ h1 {
 .edu_box {
     background-color: white;
     padding: 10px 10px 10px 10px;
-    width: max-content;
-    max-width: 200px;
+    /*width: max-content;*/
+    width: 200px;
     box-shadow: 2px 2px 4px #df4877;
     border-radius: 10px;
 
