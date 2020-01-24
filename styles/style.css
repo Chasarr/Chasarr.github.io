@@ -1,335 +1,62 @@
-/* Default Configuration */
-
-boby,html{
-    background-image: url("https://i.imgur.com/kI3LwLf.jpg");
-    background-color: #000000;
-    background-repeat: no-repeat, repeat;
-    background-size: 100%;
-    margin: 0;
-    padding: 0;
+/*Sets style for entire page*/
+html {
+    font-size: 20px; /* px means "pixels": the base font size is now 10 pixels high  */
+    font-family: 'Montserrat', sans-serif; /* this should be the rest of the output you got from Google fonts */
+    background-color: lightgrey;
 }
 
-p,a,h1,h2,h3,li,p1, span {
-    color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #fffffb;
+    padding: 10px 20px 20px 20px;
+    border: 0 solid black;  /*Borde stå 0px, men det är redundant*/
 }
 
-boby {
-    background-repeat: repeat-x;
-    margin: 0 0;
-    font-family: sans-serif;
+/*Style specifically for paragraph, unsorted list, list element and header 1*/
+p, ul, li {
+    color: black;
+    width: 500px;
 }
 
-/* End Default Configuration */
-
-/* Menu */
-
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato:300,400,700');
-html, body, h1, h2, h3, h4, h5, h6, p, li, ol, ul, pre {
-    margin: 0;
-    padding: 0;
+ul, ol {
+    border: 1px dotted black;
+    width: 200px;
 }
-html, body { min-height: 100%; }
+ul:hover, ol:hover{
 
-/* Appearance */
-.links {
-    background-color: rgba(19, 19, 19, 0);
-    background-image: linear-gradient(to bottom, #0003, transparent);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.014);
-    box-shadow: 0 0 32px #0003;
-    font-size: 1.2em;
-    font-weight: 300;
 }
 
-/* */
-
-/* */
-
-.links > a {
-    color: #ffffff;
-    padding: .75em;
-    text-align: center;
-    text-decoration: none;
-    transition: all .5s;
-}
-.links > a:hover {
-    background: #ffffff06;
-    color: rgb(0, 153, 255);
-}
-.links > .line {
-    background-color: rgb(32, 58, 173);
-    height: 1px;
-    pointer-events: none;
-}
-
-
-/* The Magic */
-#header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-.links {
-    display: grid;
-    grid-template-columns: repeat(var(--items), 1fr);
-    position: relative;
-}
-.links > .line {
-    opacity: 0;
-    transition: all .5s;
-    position: absolute;
-    bottom: 0;
-    left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
-    width: var(--width, calc(100% / var(--items)));
-    --index: 0;
-}
-.links > a:hover ~ .line {
-    opacity: 1;
-}
-
-.links > a:nth-of-type(1):hover ~ .line { --index: 1; }
-.links > a:nth-of-type(2):hover ~ .line { --index: 2; }
-.links > a:nth-of-type(3):hover ~ .line { --index: 3; }
-.links > a:nth-of-type(4):hover ~ .line { --index: 4; }
-.links > a:nth-of-type(5):hover ~ .line { --index: 5; }
-.links > a:nth-of-type(6):hover ~ .line { --index: 6; }
-.links > a:nth-of-type(7):hover ~ .line { --index: 7; }
-.links > a:nth-of-type(8):hover ~ .line { --index: 8; }
-.links > a:nth-of-type(9):hover ~ .line { --index: 9; }
-.links > a:nth-of-type(10):hover ~ .line { --index: 10; }
-.links > a:last-of-type:hover ~ .line { --index: var(--items); }
-
-/* End Menu */
-
-/* ------------------------------------------------------------- */
-
-.online {
-    margin-left: 4em;
-    line-height: 6em;
-    background-color: #00000031;
-}
-
-.content .links span {
-    color: #2b6ab1;
-}
-
-.content .links .logo {
-    font-size: 1.2em;
-    color: #00ccff;
-}
-
-.online input {
-    border: 0;
-    border-bottom: 2px solid rgb(45, 107, 168);
-    width: 10%;
-    font-size: 1.4em;
-    line-height: 35px;
-    height: 30px;
-    text-align: center;
-    padding: 0;
-    background: transparent;
-    color: rgb(150, 150, 150);
-}
-
-button {
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-    background-color:#919191;
-    border-radius:10px;
-    border:1px solid #ffffff;
-    display:inline-block;
-    cursor:pointer;
-    color:#5a5a5a;
-    font-family:Arial;
-    font-size:0.6em;
-    font-weight:bold;
-    padding:4px 15px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #ffffff;
-}
-
-/*.online h1 {
-    line-height: 6em;
-    font-weight: normal;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.2em;
+/*style that gets activated when mouse is hovering*/
+/*img:hover {
+    filter: brightness(50%);
+    display: block;
+    margin: 0 auto;
 }*/
 
-.banner {
-    text-align: center;
-    width: 100%;
-}
-
-/* ------------------------------------------------------------- */
-
-/* Footer */
-
-footer{
-    position: fixed;
-    bottom: 0;
-}
-.footer-distributed{
-    background-color: #292c2f;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    width: 100%;
-    text-align: left;
-    font: bold 16px sans-serif;
-
-    padding: 55px 50px;
-    margin-top: 80px;
-}
-
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-    display: inline-block;
-    vertical-align: top;
-}
-
-.footer-distributed .footer-left{
-    width: 40%;
-}
-
-.footer-distributed h3{
-    color:  #00ccff;
-    font: normal 36px 'arial';
-    margin: 0;
-}
-
-.footer-distributed h3 span{
-    color:  #2b6ab1;
-}
 
 
-.footer-distributed .footer-links{
-    color:  #ffffff;
-    margin: 20px 0 12px;
-    padding: 0;
-}
-
-.footer-distributed .footer-links a{
-    display:inline-block;
-    line-height: 1.8;
-    text-decoration: none;
-    color:  inherit;
-}
-
-.footer-distributed .footer-company-name{
-    color:  #8f9296;
-    font-size: 14px;
-    font-weight: normal;
-    margin: 0;
-}
-
-
-.footer-distributed .footer-center{
-    width: 35%;
-}
-
-.footer-distributed .footer-center i{
-    background-color:  #33383b;
-    color: #ffffff;
-    font-size: 25px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 42px;
-    margin: 10px 15px;
-    vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope{
-    font-size: 17px;
-    line-height: 38px;
-}
-
-.footer-distributed .footer-center p{
-    display: inline-block;
-    color: #ffffff;
-    vertical-align: middle;
-    margin:0;
-}
-
-.footer-distributed .footer-center p span{
-    display:block;
-    font-weight: normal;
-    font-size:14px;
-    line-height:2;
-}
-
-.footer-distributed .footer-center p a{
-    color:  #5383d3;
-    text-decoration: none;;
-}
-
-.footer-distributed .footer-right{
-    width: 20%;
-}
-
-.footer-distributed .footer-company-about{
-    line-height: 20px;
-    color:  #92999f;
-    font-size: 13px;
-    font-weight: normal;
-    margin: 0;
-}
-
-.footer-distributed .footer-company-about span{
+img {
+    /*display block används för att margin i body inte ska påverka den i img. Nu kan vi sätta till våra egna margins*/
     display: block;
-    color:  #ffffff;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    /*border-radius: 50%*/
 }
 
-.footer-distributed .footer-icons{
-    margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a{
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    background-color:  #33383b;
-    border-radius: 2px;
-
-    font-size: 20px;
+h1 {
+    margin: 0;
+    padding: 20px 0;
     color: #ffffff;
-    text-align: center;
-    line-height: 35px;
-
-    margin-right: 3px;
-    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px #df4877
 }
 
-
-@media (max-width: 880px) {
-
-    .footer-distributed{
-        font: bold 14px sans-serif;
-
-    }
-
-    .footer-distributed .footer-left,
-    .footer-distributed .footer-center,
-    .footer-distributed .footer-right{
-        display: block;
-        width: 100%;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .footer-distributed .footer-center i{
-        margin-left: 0;
-    }
-    .main {
-        line-height: normal;
-        font-size: auto;
-    }
+.edu_box {
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    width: max-content;
+    max-width: 200px;
+    box-shadow: 2px 2px 4px #df4877;
+    border-radius: 10px;
 
 }
