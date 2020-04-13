@@ -1,0 +1,31 @@
+html{
+    font-size: 20px; /* px means "pixels": the base font size is now 10 pixels high  */
+    font-family: 'Montserrat', sans-serif; /* this should be the rest of the output you got from Google fonts */
+    background-color: lightgrey;
+}
+body{
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #fffffb;
+    padding: 10px 20px 20px 20px;
+    border: 0 solid black;  /*Borde stå 0px, men det är redundant*/
+}
+
+h1{
+    margin: 0;
+    padding: 20px 0;
+    color: rgb(49, 49, 49);
+}
+
+.fact_box {
+    background-color: rgb(0, 86, 107);
+    
+}
+
+.linkbox {
+    background-color: rgb(214, 214, 214);
+    padding: 10px 10px 10px 10px;
+    /*width: max-content;*/
+    width: 200px;
+    border-radius: 10px;
+}

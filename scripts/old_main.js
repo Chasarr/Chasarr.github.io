@@ -12,21 +12,21 @@ if (!localStorage.getItem("name")) {
 }
 
 
-let start = new Audio("sounds/start.mp3")
-let end = new Audio("sounds/end.mp3")
+let start = new Audio("/sounds/start.mp3")
+let end = new Audio("/sounds/end.mp3")
 myImage.onmouseenter = function () {
     let mySrc = myImage.getAttribute("src")
-    if (mySrc === "images/graphicz.jpg") {
-        myImage.setAttribute("src", "images/graphicz-angry.jpg")
+    if (mySrc === "/images/graphicz.jpg") {
+        myImage.setAttribute("src", "/images/graphicz-angry.jpg")
     }
 }
 myImage.onmouseleave = function () {
-    myImage.setAttribute("src", "images/graphicz.jpg")
+    myImage.setAttribute("src", "/images/graphicz.jpg")
     end.pause()
 }
 
 myImage.onclick = function () {
-    myImage.setAttribute("src", "images/graphicz-deepfried.jpg")
+    myImage.setAttribute("src", "/images/graphicz-deepfried.jpg")
     end.play()
 }
 console.log(myButton)
