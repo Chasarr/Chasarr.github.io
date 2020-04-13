@@ -23,9 +23,6 @@ ul, ol {
     border: 1px dotted black;
     width: 200px;
 }
-ul:hover, ol:hover{
-
-}
 
 /*style that gets activated when mouse is hovering*/
 /*img:hover {
@@ -67,4 +64,14 @@ h1 {
     width: 300px;
     box-shadow: 2px 2px 4px #df4877;
     border-radius: 10px;
+}
+
+.link_box{
+    background-color: red;
+    padding: 10px 10px 10px 10px;
+    width: max-content;
+    /*width: 300px;*/
+    box-shadow: 2px 2px 4px #df4877;
+    border-radius: 10px;
+    a: white
 }
