@@ -3,6 +3,8 @@ let k_button = document.getElementById("k_button")
 //localStorage.setItem("counter", 0)
 //console.log(localStorage.getItem(counter))
 
+
+
 if (!localStorage.getItem("georgij_counter")) {
     localStorage.setItem("georgij_counter", 0)
     g_button.innerHTML = "0"
@@ -31,4 +33,9 @@ k_button.onclick = function() {
     localStorage.setItem("kaiwen_counter", counter)
     k_button.innerHTML = localStorage.getItem("kaiwen_counter")
 
+}
+
+window.onerror = function (message, url, lineNo){
+    console.log('Error: ' + message + '\n' + 'Line Number: ' + lineNo);
+    return true;
 }
