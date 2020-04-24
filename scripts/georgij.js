@@ -35,7 +35,3 @@ k_button.onclick = function() {
 
 }
 
-window.onerror = function (message, url, lineNo){
-    console.log('Error: ' + message + '\n' + 'Line Number: ' + lineNo);
-    return true;
-}
