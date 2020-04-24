@@ -3,7 +3,7 @@ let myHeading = document.querySelector("h1")
 let myButton = document.querySelector("button")
 const insultQuestions = ["Write yo name ya doofus", "Your name. Hand it over", "GE MIG NAMNET SKIT I PRIVACY", "Please gib name YOU IDOET!!1!!1",
     "Hello it is I, the president of USA of america, Donald Trump. HAND OVER USERNAME OR I'LL SWAT YOU", "Give your name or I'll murder your entire family"]
-
+myButton.setAttribute("hello")
 if (!localStorage.getItem("name")) {
     setUserName()
 } else {
@@ -27,6 +27,7 @@ myImage.onmouseleave = function () {
 
 myImage.onclick = function () {
     myImage.setAttribute("src", "/images/graphicz-deepfried.jpg")
+    console.log("lol")
     end.play()
 }
 console.log(myButton)
