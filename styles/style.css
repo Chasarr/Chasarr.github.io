@@ -40,7 +40,7 @@ h1{
     display: inline-block;
     font-size: 50px;
     margin: 4px 2px;
-    border-radius: 200px;
+    border-radius: 50px;
   }
 
   .k_button {
@@ -53,5 +53,5 @@ h1{
     display: inline-block;
     font-size: 50px;
     margin: 4px 2px;
-    border-radius: 200px;
+    border-radius: 50px;
   }
