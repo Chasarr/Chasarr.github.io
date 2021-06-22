@@ -1,0 +1,45 @@
+#!/bin/sh
+# udhcpc simple.script for Tomato dual dynamic wan
+
+[ -z "$1" ] &amp;&amp; echo "Error: should be called with parameter from udhcpc" &amp;&amp; exit 1
+
+if [ "$interface" = "vlan845" ]; then # only handle vlan2 here
+
+	case "$1" in
+
+		bound)
+			logger vlan845 udhcpc bound request to IP "$ip" NM "$subnet" received
+
+			/sbin/ifconfig $interface $ip netmask "$subnet"
+			/sbin/route add -host "$router" dev "$interface"
+
+			nvram set wan2_ipaddr="$ip"
+			nvram set wan2_netmask="$subnet"
+			nvram set wan2_gateway="$router"
+			nvram set wan2_get_dns="$dns"
+			nvram set wan2_server="$serverid"
+			#      nvram commit
+			;;
+
+		renew)
+			logger vlan845 udhcpc RENEW request to IP "$ip" NM "$subnet" received
+			;;
+
+		deconfig)
+			logger vlan845 udhcpc deconfigure request receieved
+
+			/sbin/ifconfig $interface 0.0.0.0
+			/sbin/route del -host "$(nvram get wan2_gateway)" dev "$interface"
+
+			nvram set wan2_ipaddr="0.0.0.0"
+			nvram set wan2_gateway="0.0.0.0"
+			#      nvram commit
+			;;
+
+		*)
+			logger vlan845 udhcpc unknown "$@" request received
+			;;
+	esac
+fi
+
+exit 0
